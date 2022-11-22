@@ -2,12 +2,12 @@
 Simple wallets for crypto
 
 # Goal of this repo
-Build a simple system (over engenirig)  to provide a crypto wallet 
+Build a simple system (over engineering)  to provide a crypto wallet 
 
 # Technologies 
-Node (Express and Sequelize)
-Apache Kafka
+-Node (Express and Sequelize)
+-Apache Kafka
 ## Deploy
-Terraform with Docker
+-Terraform with Docker
  
 
