@@ -1,0 +1,27 @@
+version: "3"
+services:
+       endpoint-service:
+           container_name: endpoint-service
+           image: ppavan/endpoint-service
+           restart: always
+           build: .
+           ports:
+             - "3000:3000"
+           links:
+             - mongo
+           volumes:
+              - .:/usr/src/cryptoWallet-endpoint-service
+           command:
+              - /bin/sh
+              - -c
+              - |
+                cd /usr/src/cryptoWallet-endpoint-service   
+                npm install
+                npm start
+       mongo:
+             container_name: mongo
+             image: mongo
+             volumes:
+               - /data:/data/db
+             ports:
+               - '27018:27017'
