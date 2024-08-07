@@ -2,7 +2,7 @@ version: "3"
 services:
        endpoint-service:
            container_name: endpoint-service
-           image: ppavan/endpoint-service
+           image: node:latest
            restart: always
            build: .
            ports:
