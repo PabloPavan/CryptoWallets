@@ -25,7 +25,7 @@ router.post('/register', async (req, res) => {
         });
             
     } catch (err) {
-        return res.status(400).send({error: 'Registration failed'});
+        return res.status(400).send({error: 'Registration failed ' + err});
     }
 });
 
@@ -49,7 +49,7 @@ router.post('/authentication', async (req, res) => {
         });
         
     } catch (err) {
-        return res.status(400).send({error: 'authentication failed'});
+        return res.status(400).send({error: 'authentication failed ' + err});
     }
 });
 
